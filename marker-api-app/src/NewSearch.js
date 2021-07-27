@@ -1,20 +1,27 @@
 import React from "react"
-import {ContextConsumer} from "./Context"
-import FormSearch from "./FormSearch"
-import Nav from "./Nav"
+import {ContextConsumer} from "./userContext"
+import SearchForm from "./SearchForm"
+
 
 function NewSearch(props){
+    const inputVal ="starbucks" //get input from the SearchForm component's input
+
     return(
         <div>
-            <Nav/>
-            <FormSearch/>
-            <button onClick= {props.NewSearch}>SEARCH!</button>
-            <h1>Results</h1>
-            <h3>{props.newSearchArray.trademark}</h3>
+            <SearchForm />
+                <ContextConsumer>
+                {context=>(
+                // <button onClick= {context.handleNewSearch(inputVal)}>SEARCH!</button>
+                       <button>search</button>  
+                )}
+                </ContextConsumer>
+
+            <h2 class="results">Results</h2>
+            <h3>{inputVal}</h3>
         
                   <div> 
                     <ul><li>{props.newSearchArray}</li></ul>  
-                    <button onClick={props.SaveSearch()}>Save Search</button>
+                    {/* <button onClick={props.SaveSearch()}>Save Search</button> */}
                 </div>
         
           

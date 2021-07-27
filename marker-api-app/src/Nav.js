@@ -1,17 +1,17 @@
-import {Link, Switch, Route} from "react-router-dom"
-import Home from "./App"
+import {BrowserRouter as Router, Link, Switch, Route} from "react-router-dom"
+import Home from "./Home"
 import NewSearch from "./NewSearch"
 import SavedSearches from "./SavedSearches"
 
 function Nav(){
 
     return(
-
+        <Router>
         <div>
-            <nav>
-            <Link to="/">Home</Link>
-            <Link to="/newsearch">New Search</Link>
-            <Link to="/savedsearches">Saved Searches</Link>
+            <nav class="navbar">
+            <Link to="/"> Home |</Link>
+            <Link to="/newsearch"> New Search |</Link>
+            <Link to="/savedsearches"> Saved Searches </Link>
             </nav>
 
             <Switch>
@@ -22,6 +22,7 @@ function Nav(){
             
             
         </div>
+        </Router>
     )
 }
 

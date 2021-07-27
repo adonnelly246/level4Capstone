@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.navbar{
+    grid-area: 1 / 2 / 2 / 4; 
+}
+
+h1{
+    
+}
+h2{
+
+}
+
+    .div2 { grid-area: 2 / 2 / 4 / 4; }
+    .div3 { grid-area: 4 / 2 / 5 / 4; }
