@@ -1,18 +1,17 @@
-import React, {Component, useState} from "react"
-import Home from "./Home"
+import React, {Component} from "react"
 import Nav from "./Nav"
+import {ContextProvider} from "./userContext"
 
-class App extends Component{
-      
+function App (){
+        return (      
+            <ContextProvider>
+                <div class="container">
+                    <Nav/>
+                </div>
+            </ContextProvider>
 
-    render() {
-        return (
-        <div class="container">
-            <Nav/>
-
-        </div>
         )
-    }
+
 }
 
 export default App

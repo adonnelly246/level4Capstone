@@ -3,11 +3,17 @@ import {ContextConsumer} from './userContext'
 
 function SavedSearches(props){
     return(
-        <div>
+        <div class="middle">
            <h2> Saved Searches </h2>
-            <ul>
-                {props.savedArray}     
-            </ul>
+           <ContextConsumer>
+               {context => (
+                    <ul>
+                       <li>{context.savedArray}  </li> 
+                    </ul>
+               )}
+               
+           </ContextConsumer>
+            
             
         </div>
     )

@@ -4,24 +4,29 @@ import SearchForm from "./SearchForm"
 
 
 function NewSearch(props){
-    const inputVal ="starbucks" //get input from the SearchForm component's input
 
     return(
-        <div>
+        <div class="middle">
             <SearchForm />
                 <ContextConsumer>
-                {context=>(
-                // <button onClick= {context.handleNewSearch(inputVal)}>SEARCH!</button>
-                       <button>search</button>  
-                )}
+                    {context=>(
+                        
+                        <button onClick= {context.handleNewSearch(props.value)}>SEARCH!</button> 
+                        
+                    )}
                 </ContextConsumer>
 
+
             <h2 class="results">Results</h2>
-            <h3>{inputVal}</h3>
+            <h3>{props.value}</h3>
         
-                  <div> 
+                  <div class="results-list"> 
                     <ul><li>{props.newSearchArray}</li></ul>  
-                    {/* <button onClick={props.SaveSearch()}>Save Search</button> */}
+                    <ContextConsumer>
+                        {context=>(
+                              <button onClick={context.SaveSearch(props.value)}>Save Search</button> 
+                        )}
+                    </ContextConsumer>
                 </div>
         
           

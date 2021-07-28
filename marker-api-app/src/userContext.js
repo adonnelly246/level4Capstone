@@ -2,7 +2,6 @@ import React, {Component} from "react"
 import axios from 'axios'
 
 const {Provider, Consumer} = React.createContext()
-
 class ContextProvider extends Component {
   
         state={
@@ -20,10 +19,10 @@ class ContextProvider extends Component {
                 registrationDate: ""
             }],
             
-           savedArray: []
+           savedArray: ["saved Array1", "savedinfo 2"]
            
         }
-
+        
         handleChange = (event) =>{
             const {name, value} = event.target
             this.setState({[name]: value})
@@ -31,6 +30,7 @@ class ContextProvider extends Component {
        
         SaveSearch = (event) =>{
             event.preventDefault()
+
             const newSave = {
                 name: this.state.name,
                 owner: this.state.owner,
@@ -63,7 +63,7 @@ class ContextProvider extends Component {
     
    componentDidMount=()=> {
         //tLhRXZCcYJ
-        axios.get(`https://markerapi.com/api/v2/trademarks/`)
+        axios.get(`https://markerapi.com/api/v2/trademarks/trademark/*/status/active/start/5/username/adonnelly246/password/tLhRXZCcYJ`)
           .then(result => {
               this.setState({
 
@@ -85,9 +85,10 @@ class ContextProvider extends Component {
             }
           
     handleNewSearch = (query)=>{
-     axios.get(`https://markerapi.com/api/v2/trademarks/trademark/`+{query}+`/status/all/start/1/username/adonnelly246/password/tLhRXZCcYJ`)
+     axios.get(`https://markerapi.com/api/v2/trademarks/trademark/`+{query}+`/status/active/start/5/username/adonnelly246/password/tLhRXZCcYJ`)
         .then(res =>{
           this.setState({newSearchArray: [res.obj]})
+          console.log(query)
         })
         .catch(error => console.log(error))
     }
