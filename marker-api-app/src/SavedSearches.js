@@ -1,7 +1,7 @@
 import React from "react"
 import {ContextConsumer} from './userContext'
 
-function SavedSearches(props){
+function SavedSearches(){
     return(
         <div class="middle">
            <h2> Saved Searches </h2>

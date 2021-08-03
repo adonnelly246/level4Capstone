@@ -1,7 +1,7 @@
 import React, {useState} from "react"
-import {ContextConsumer} from "./userContext"
 
-function SearchForm (props){
+
+function SearchForm (){
 const [queryInput, setQueryInput] = useState('')
     return(
                    <div>
@@ -10,7 +10,7 @@ const [queryInput, setQueryInput] = useState('')
                        <input   
                        type="text"
                        name="new-search"
-                       placeholder="Search by Trademark"
+                       placeholder="Search Domains"
                        value={queryInput}
                        onChange={event => setQueryInput(event.target.value)}/>
                    </form>

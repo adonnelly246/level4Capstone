@@ -1,60 +1,105 @@
+body{
+    background-image: url("background-img.jpg");
+
+}
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    background-color: #474747;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 700px;
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .middle{
-    background-color: white;
-    grid-area: 1 / 2 / 5 / 4;
-    padding: 50px;
+    background-color: rgb(44, 40, 40);
+    opacity: 80%;
+    grid-area: 3 / 2 / 3 / 4;
+    padding: 40px;
     margin-top: 50px;
     margin-bottom: 10px;
-    width: 550px;
-    height: 500px;
+    margin-right: 40px;
+    width: 500px;
+    height: 300px;
+    border: 2px solid rgb(44, 40, 40);
+    border-radius: 3%;
+    color: wheat;
 }
 .nav-container{
-    grid-area: 1 / 2 / 2 / 4; 
-    margin-bottom: 20px;
-    margin-top: 20px;
+    grid-area: 0 / 2 / 1 / 4; 
+    margin-top: 10px;
     width: 600px;
-    height: 40px;
-    background-color: #fdb321;
+    height: 30px;
+    background-color: #8893f7;
     border: solid darkgray 2px;
 }
 .nav-links{
-    padding-left: 20px;
+    padding-left: 10px;
    color: darkgray;
    font-size: 20px;
 }
-h1{
-    grid-area: 2 / 2 / 4 / 4;   
-}
-h2{
-    grid-area: 4 / 2 / 5 / 4; 
-}
-.header{
-    grid-area: 1 / 2 / 1 / 4; 
-    margin-bottom: 20px;
-    margin-top: 40px;
-/*    
-    <div class="header"><h1>Trademark Checker</h1></div> 
 
-*/
+.right-side{
+    grid-area: 1 / 2 / 2 / 5; 
+    margin-top: 55px;
+    margin-left: 2px; 
+    margin-right: 20px; 
+    padding-left: 20px;
+    width: 400px;
+    text-align: left;
 }
 
+.submitBtn{
    
-    .div3 {}
+    /* background-color: rgb(48, 95, 156);
+    border: 2px solid rgb(12, 21, 51); */
+    border-radius: 5%;
+    padding: 5px;
+    margin-top: 10px;
+}
 
 
     
     @media only screen and (max-width: 768px){
         
     }
+    @media (max-width: 900px){
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            height: 900px;
+            width: auto;
+            text-align: left;
+        }
+     
+        .middle{
+            grid-area: 1 / 1 / 4 / 3;
+            width: 250px;
+            height: 600px;
+            margin-left: 0px;
+        }
+
+        .right-side{
+            grid-area: 1 / 2 / 3 / 2;
+            width: 300px;
+            margin-left: 5px;
+        }
+        .nav-container{
+            grid-area: 1 / 1 / 2 / 2;
+            width: 350px;
+            height: 40px;
+            margin-left: 50px;
+        }
+        .nav-links{
+          padding: 20px; 
+          padding-top: 5px;
+        }
+    }
+  
+    
+    
+  
