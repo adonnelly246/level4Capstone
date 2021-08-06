@@ -8,8 +8,8 @@ The project will have a basic layout and api function. There will be three pages
 
 The landing page/Homepage will have a search bar to create a new search, information about the App, and each page will render a nav bar for navigation.
 The user will be able to navigate to the Home page, Saved Searches page, and New Search pages.
-On the Home page, the user will be able to create a new search and view information about how the app works.
-Once the user submits their search term they will be directed to the New Search page, where the list of information is shown for that search and the user can add the new search to the Saved Searches list.
+On the Home page, the user will be able to view information about how the app works and navigate through the menu.
+Once the user navigates to the New Search page, they can create a new search using the search bar. Once the user submits their querry, a list of information is shown for that search and the user can add the new search to the Saved Searches list.
 On the Saved Searches page,the user can view a list of all saved searches with the search term and relevent information.
 
 
