@@ -10,7 +10,8 @@ function SearchForm (){
                             {context=>(
                                 <form onSubmit={context.handleNewSearch}>
                                   <h2>New Search</h2>
-                                  <input   
+                                  <input  
+                                  className="input-field" 
                                   type="text"
                                   name="searchTerm"
                                   placeholder="Search Domains"

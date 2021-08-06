@@ -9,7 +9,7 @@ return(
             {context=>(
                 <div>
                 <h2 className="results">Results</h2>
-                <h3>{context.searchTerm}</h3>
+                {/* <h3>{context.searchTerm}</h3> */}
                              
                                <div className="results-list">                                                                    
                                            <ul>

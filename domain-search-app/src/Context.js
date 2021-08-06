@@ -49,9 +49,10 @@ class ContextProvider extends Component {
                     // update_date: item.update_date,
                     // isDead: item.isDead
                  })),
-                 newSearchButton: true
+                 newSearchButton: true,
+                 searchTerm: ""
               });
-
+                
           })
 
           .catch((error) => {
