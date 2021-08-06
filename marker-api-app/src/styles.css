@@ -1,6 +1,7 @@
 body{
     background-image: url("background-img.jpg");
-
+    background-repeat: no-repeat;
+    background-size: auto 1400px;
 }
 .container{
     display: grid;
@@ -13,15 +14,15 @@ body{
 }
 
 .middle{
+    text-align: left;
     background-color: rgb(44, 40, 40);
     opacity: 80%;
-    grid-area: 3 / 2 / 3 / 4;
+    grid-area: 3 / 2 / 4 / 3;
     padding: 40px;
     margin-top: 50px;
     margin-bottom: 10px;
     margin-right: 40px;
     width: 500px;
-    height: 300px;
     border: 2px solid rgb(44, 40, 40);
     border-radius: 3%;
     color: wheat;
@@ -30,26 +31,32 @@ body{
     grid-area: 0 / 2 / 1 / 4; 
     margin-top: 10px;
     width: 600px;
-    height: 30px;
+    height: 35px;
     background-color: #8893f7;
     border: solid darkgray 2px;
 }
 .nav-links{
     padding-left: 10px;
-   color: darkgray;
-   font-size: 20px;
+    color: darkgray;
+    font-size: 20px;
 }
 
-.right-side{
-    grid-area: 1 / 2 / 2 / 5; 
+.about{
     margin-top: 55px;
     margin-left: 2px; 
     margin-right: 20px; 
-    padding-left: 20px;
+    padding: 20px;
     width: 400px;
     text-align: left;
 }
 
+.results{
+    text-decoration: solid underline;
+}
+.results-list{
+    text-align: left;
+    padding: 5px;
+}
 .submitBtn{
    
     /* background-color: rgb(48, 95, 156);
@@ -57,6 +64,7 @@ body{
     border-radius: 5%;
     padding: 5px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 
@@ -64,11 +72,11 @@ body{
     @media only screen and (max-width: 768px){
         
     }
-    @media (max-width: 900px){
+    @media only screen and (max-width: 900px){
         .container{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             height: 900px;
@@ -77,21 +85,25 @@ body{
         }
      
         .middle{
-            grid-area: 1 / 1 / 4 / 3;
-            width: 250px;
-            height: 600px;
+            grid-area: 5 / 1 / 6 / 2;
+            width: 400px;
             margin-left: 0px;
+            margin-bottom: 10px;
+          
         }
 
-        .right-side{
-            grid-area: 1 / 2 / 3 / 2;
-            width: 300px;
-            margin-left: 5px;
+        .about{
+            grid-area: 2 / 1 / 2 / 2;
+            width: 600px;       
+            margin-left: 10px;
+            margin-top: 10px;
+            background-color: white;
+            opacity: 75%;
+  
         }
         .nav-container{
             grid-area: 1 / 1 / 2 / 2;
-            width: 350px;
-            height: 40px;
+            width: 450px;
             margin-left: 50px;
         }
         .nav-links{

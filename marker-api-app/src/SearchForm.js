@@ -1,19 +1,25 @@
 import React, {useState} from "react"
+import {ContextConsumer} from "./Context"
 
 
 function SearchForm (){
-const [queryInput, setQueryInput] = useState('')
+
     return(
                    <div>
-                   <form>
-                       <h2>New Search</h2>
-                       <input   
-                       type="text"
-                       name="new-search"
-                       placeholder="Search Domains"
-                       value={queryInput}
-                       onChange={event => setQueryInput(event.target.value)}/>
-                   </form>
+                         <ContextConsumer>
+                            {context=>(
+                                <form onSubmit={context.handleNewSearch}>
+                                  <h2>New Search</h2>
+                                  <input   
+                                  type="text"
+                                  name="searchTerm"
+                                  placeholder="Search Domains"
+                                  value={context.searchTerm}
+                                  onChange={context.handleChange}/>
+                                <button className="submitBtn">SEARCH!</button> 
+                              </form>   
+                                     )}
+                        </ContextConsumer>
                </div>
                 
 

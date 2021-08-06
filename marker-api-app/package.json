@@ -1,6 +1,6 @@
 {
   "name": "marker-api-app",
-  "proxy": "https://domainsdb.info/",
+  "proxy": "https://domainsdb.info",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

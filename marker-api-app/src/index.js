@@ -2,10 +2,12 @@ import React from "react"
 import ReactDOM from "react-dom"
 import {BrowserRouter} from "react-router-dom"
 import App from "./App"
+import { ContextProvider } from "./Context"
 import styles from "./styles.css"
 
+
 ReactDOM.render(
-  <BrowserRouter>  
+  <BrowserRouter>    
       <App />
  </BrowserRouter>,
   document.getElementById('root')

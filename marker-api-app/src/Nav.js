@@ -7,8 +7,8 @@ function Nav(){
 
     return(
         <Router>
-        <div class="nav-container">
-            <nav class="nav-links">
+        <div className="nav-container">
+            <nav className="nav-links">
             <Link to="/"> Home |</Link>
             <Link to="/newsearch"> New Search |</Link>
             <Link to="/savedsearches"> Saved Searches </Link>

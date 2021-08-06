@@ -1,15 +1,22 @@
 import React from "react"
-import {ContextConsumer} from './userContext'
+import {ContextConsumer} from './Context'
 
 function SavedSearches(){
     return(
-        <div class="middle">
+        <div className="middle">
            <h2> Saved Searches </h2>
            <ContextConsumer>
                {context => (
-                    <ul>
-                       <li>{context.savedArray}  </li> 
-                    </ul>
+                   <div>
+                        
+                        {console.log(context.savedArray)}
+                        {/* {context.searchTerm} */}
+                        {context.savedArray.map((item, i)=>(<ul> <li key={i}>{item + " "} </li></ul>))}
+
+                       {/* <li>{context.savedArray} </li>  */}
+                       {console.log(context.savedArray)}
+
+                    </div>
                )}
                
            </ContextConsumer>

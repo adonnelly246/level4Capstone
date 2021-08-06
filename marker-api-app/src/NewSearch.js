@@ -1,40 +1,28 @@
-import React, {useState} from "react"
-import {ContextConsumer} from "./userContext"
+import React from "react"
+import {ContextConsumer} from "./Context"
 import SearchForm from "./SearchForm"
+import ResultsList from "./ResultsList"
+                {/* did handlenewSearch run? => display both searchForm and resultsList : just display searchForm */}
 
-
-function NewSearch(props){
-// const [searchDisplay, setSearchDisplay] = useState()
+function NewSearch(){   
+               
     return(
-        <div class="middle">
-            <SearchForm />
-                <ContextConsumer>
-                    {context=>(
-                        
-                        <button class="submitBtn" onClick= {()=>context.handleNewSearch(props.value)}>SEARCH!</button> 
-                        
-                    )}
-                </ContextConsumer>
+    <ContextConsumer>
+        {context=>(
+        context.newSearchButton === true?
+            <div className="middle">      
+                <SearchForm />
 
+                <ResultsList />
+            </div>  
 
-                        {/* useeffect/usestate? */}
-                        {/* did handlenewSearch run? if so=> display both searchbar and results: just display searchbar */}
-            <h2 class="results">Results</h2>
-            <h3>{props.value}</h3>
-        
-                  <div class="results-list"> 
-                    <ul><li>{props.newSearchArray}</li></ul>  
-                    <ContextConsumer>
-                        {context=>(
-                        
-                              <button class="submitBtn" onClick={()=> context.SaveSearch()}>Save Search</button> 
-                              
-                        )}
-                    </ContextConsumer>
-                </div>
-        
-          
-        </div>   
+        :
+            <div className="middle">
+
+                <SearchForm />
+            </div>  
+        )} 
+    </ContextConsumer>
     )
 }
 
